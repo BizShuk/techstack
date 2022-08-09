@@ -1,6 +1,6 @@
 package fundation
 
-// Notice: [Golang] add map key in loop will increase more loop cycle, but not for slice
+// [Pattern]: [Go Map] add map key in loop will increase more loop cycle, but not for slice
 func MapIncrementInLoop() {
 	y := map[int]bool{0: true}
 	i := 0

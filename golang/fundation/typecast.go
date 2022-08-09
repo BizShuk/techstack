@@ -29,7 +29,7 @@ func TypeCastingMain() {
 	c := S3{a} // cast S1 to S3
 	fmt.Println("c", c, c.f1)
 
-	// Notice: Struct only can assign to the struct has the same fields
+	// [Pattern]: [Go struct] Struct only can assign to the struct has the same fields
 	// But with both interface, it will work on interface level
 
 	// var aAlias S1alias = S1alias(a)

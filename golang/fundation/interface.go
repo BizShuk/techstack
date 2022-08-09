@@ -5,11 +5,11 @@ import (
 	"sort"
 )
 
-// Notice: type alias for underlying method #test123
+// [Notice]: type alias for underlying method #test123
 // No underlying type method call unless you declar it
 type x sort.IntSlice
 
-// Notice: empty concrete type struct with interface
+// [Pattern]: [Go embeded struct] [anonymous field] [promote field] empty concrete type struct with interface
 type y struct {
 	sort.Interface
 }
@@ -47,7 +47,7 @@ func InterfaceMain() {
 	var w6 y = y{w1} // w6 : y from sort.IntSlice
 	fmt.Println(w6)
 
-	// w7 : sort.IntSlice from y  // Notice: w1 is assigned to y.Interface, not y
+	// w7 : sort.IntSlice from y  // [Notice]: w1 is assigned to y.Interface, not y
 	var w7 sort.IntSlice = w6.Interface.(sort.IntSlice)
 	fmt.Println(w7)
 }
