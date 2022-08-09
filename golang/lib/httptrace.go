@@ -1,13 +1,12 @@
 package lib
 
-package main
-
 import (
 	"fmt"
 	"log"
 	"net/http"
 	"net/http/httptrace"
 )
+
 // output:
 // Get Conn: golang.org:443
 // DNS Info: {Host:golang.org}

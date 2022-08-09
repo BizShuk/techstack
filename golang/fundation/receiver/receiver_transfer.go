@@ -9,59 +9,59 @@ type Sinterface interface {
 	Get()
 }
 
-type pointerReceiverStructWithBracket struct {
+type PointerReceiverStructWithBracket struct {
 	T string
 }
 
-func (p *pointerReceiverStructWithBracket) Get() {
+func (p *PointerReceiverStructWithBracket) Get() {
 	fmt.Println(p.T)
 }
 
-type valueReceiverStructWithBracket struct {
+type ValueReceiverStructWithBracket struct {
 	T string
 }
 
-func (v valueReceiverStructWithBracket) Get() {
+func (v ValueReceiverStructWithBracket) Get() {
 	fmt.Println(v.T)
 }
 
-type pointerReceiverStructWithoutBracket string
+type PointerReceiverStructWithoutBracket string
 
-func (p *pointerReceiverStructWithoutBracket) Get() {
+func (p *PointerReceiverStructWithoutBracket) Get() {
 	fmt.Println(*p)
 }
 
-type valueReceiverStructWithoutBracket string
+type ValueReceiverStructWithoutBracket string
 
-func (v valueReceiverStructWithoutBracket) Get() {
+func (v ValueReceiverStructWithoutBracket) Get() {
 	fmt.Println(v)
 }
 
-func main() {
-	// cannot use pointerReceiverStructWithBracket literal (type pointerReceiverStructWithBracket) as type Sinterface in argument to interpret:
-	// pointerReceiverStructWithBracket does not implement Sinterface (Get method has pointer receiver)
-	// interpret(pointerReceiverStructWithBracket{})
+func ReceiverTransfer() {
+	// cannot use PointerReceiverStructWithBracket literal (type PointerReceiverStructWithBracket) as type Sinterface in argument to ReceiverInterpret:
+	// PointerReceiverStructWithBracket does not implement Sinterface (Get method has pointer receiver)
+	// ReceiverInterpret(PointerReceiverStructWithBracket{})
 
-	interpret(&pointerReceiverStructWithBracket{})
+	ReceiverInterpret(&PointerReceiverStructWithBracket{})
 
-	interpret(valueReceiverStructWithBracket{})
+	ReceiverInterpret(ValueReceiverStructWithBracket{})
 
-	interpret(&valueReceiverStructWithBracket{})
+	ReceiverInterpret(&ValueReceiverStructWithBracket{})
 
-	// invalid composite literal type pointerReceiverStructWithoutBracket
-	// interpret(pointerReceiverStructWithoutBracket{})
+	// invalid composite literal type PointerReceiverStructWithoutBracket
+	// ReceiverInterpret(PointerReceiverStructWithoutBracket{})
 
-	// invalid composite literal type pointerReceiverStructWithoutBracket
-	// interpret(&pointerReceiverStructWithoutBracket{})
+	// invalid composite literal type PointerReceiverStructWithoutBracket
+	// ReceiverInterpret(&PointerReceiverStructWithoutBracket{})
 
-	// invalid composite literal type valueReceiverStructWithoutBracket
-	// interpret(valueReceiverStructWithoutBracket{})
+	// invalid composite literal type ValueReceiverStructWithoutBracket
+	// ReceiverInterpret(ValueReceiverStructWithoutBracket{})
 
-	// invalid composite literal type valueReceiverStructWithoutBracket
-	// interpret(&valueReceiverStructWithoutBracket{})
+	// invalid composite literal type ValueReceiverStructWithoutBracket
+	// ReceiverInterpret(&ValueReceiverStructWithoutBracket{})
 
 }
 
-func interpret(s Sinterface) {
+func ReceiverInterpret(s Sinterface) {
 	s.Get()
 }
