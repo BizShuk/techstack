@@ -1,17 +1,9 @@
-package fundation
+package receiver
 
 import (
 	"fmt"
 	"time"
 )
-
-type PointerReceiver int
-
-func (p *PointerReceiver) Call() {}
-
-type ValueReceiver int
-
-func (p ValueReceiver) Call() {}
 
 // [Notice]: [Go] pointer receiver issue with loop
 func LoopEndValueWithPointerReceiver() {

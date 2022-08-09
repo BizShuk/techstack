@@ -7,6 +7,9 @@ import "github.com/bizshuk/techstack/golang/fundation"
 func main() {
 	// sort.SortInts()	// golang/fundation/sort/int.go
 
-	// fundation.LoopEndValueWithPointerReceiver()	// golang/fundation/receiver.go
-	fundation.InitOrderOnVariables() // golang/fundation/initializationOrder.go
+	// golang/fundation
+	// fundation.LoopEndValueWithPointerReceiver()
+	// fundation.InitOrderOnVariables()
+	// fundation.BasicSlice()
+	fundation.FmtInterface()
 }
