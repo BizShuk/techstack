@@ -1,6 +1,6 @@
 package main
 
-import "github.com/bizshuk/techstack/golang/fundation"
+import "fmt"
 
 // This example inserts several ints into an IntHeap, checks the minimum,
 // and removes them in order of priority.
@@ -11,5 +11,10 @@ func main() {
 	// fundation.LoopEndValueWithPointerReceiver()
 	// fundation.InitOrderOnVariables()
 	// fundation.BasicSlice()
-	fundation.FmtInterface()
+	// fundation.FmtInterface()
+	// receiver.TypeAddress()
+	// receiver.ReceiverInterface()
+	// fundation.NumberPresent()
+	x := 0xff
+	fmt.Printf("%064b", x)
 }
