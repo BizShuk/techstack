@@ -2,6 +2,7 @@ package fundation
 
 import (
 	"bytes"
+	"fmt"
 	"unicode"
 )
 
@@ -29,4 +30,18 @@ func CharMain() {
 	_ = byte(rune_char)
 
 	print(unicode.IsLower(rune_char) || unicode.IsNumber(rune_char))
+}
+
+func CharSlice() {
+	s := "1234567890abcdefghijklmnopqrstuvwxyz"
+	byteSlice := []byte(s)
+	runeSlice := []rune(s)
+
+	for i := 0; i < 10; i++ {
+		byteSlice[i] += 1
+		runeSlice[i] += 1
+	}
+
+	fmt.Println(string(byteSlice), byteSlice)
+	fmt.Println(string(byteSlice), runeSlice)
 }
