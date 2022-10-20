@@ -1,53 +1,5 @@
 # Goroutine and Channel note
 
-### usage
-
-buffered channel
-
-```go
-ch := make(chan int, 100)
-```
-
-unbuffered channel
-
-```go
-ch: make(chan int)
-```
-
-Check ch whether it is closed
-
-```go
-v, ok := <- ch
-```
-
-Will for loop util ch gets closed
-
-```go
-for v := range ch {
-
-}
-```
-
-defer close channels
-
-```go
-defer close(ch)
-```
-
-### select
-
-Only block when channels are open util value arrives. nil channel will block forever.
-closed channel will consumer CPU always.
-
-```go
-select {
-    case <- ch1:
-    case <- done:
-        return
-}
-
-```
-
 ### time.After
 
 it returns a channel.
@@ -63,15 +15,6 @@ it returns a channel.
 ### merge
 
 merge channels into one channel
-
-### nil channel
-
-close on nil channel will cause panic
-
-### tips
-
-- set as buffered channel to prevent publiser hanging.
-- Only sender should close channels, only close when receiver must be told
 
 ### Pipeline Stages
 

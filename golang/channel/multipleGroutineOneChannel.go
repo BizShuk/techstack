@@ -1,4 +1,4 @@
-package main
+package channel
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 var tx chan string
 
-func main() {
+func MultipleGoroutineOnOneChannel() {
 	tx = make(chan string, 10)
 
 	w1 := writeClosure("w1")
@@ -42,7 +42,7 @@ func writeClosure(id string) func() {
 
 			// blocking if capacity is full
 			tx <- id + ":" + strconv.Itoa(count)
-			fmt.Printf("Send by %v with value %v\n", id, count)
+			fmt.Printf("Send value %v by sender %v\n", count, id)
 
 			count++
 			time.Sleep(50 * time.Millisecond)
@@ -53,7 +53,7 @@ func writeClosure(id string) func() {
 func readClosure(id string) func() {
 	return func() {
 		for x := range tx {
-			fmt.Printf("Receive by %v with value %v\n", id, x)
+			fmt.Printf("Read value %v from receiver %v \n", id, x)
 		}
 	}
 }
