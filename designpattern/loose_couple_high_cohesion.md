@@ -1,1 +1,0 @@
-# Loose Couple High Cohesion

@@ -11,6 +11,13 @@ import "fmt"
 func BufferedChannel() {
 	ch := make(chan int, 100)
 	defer close(ch)
+
+	go func() {
+		for i := 0; i < 10; i++ {
+			ch <- i
+		}
+	}()
+
 	// v, ok := <-ch // Simple fetch from channel
 	for v := range ch { // Util ch gets closed
 		fmt.Println(v)
