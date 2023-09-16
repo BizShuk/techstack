@@ -1,0 +1,10 @@
+- name: Check Sudo tool
+  yum:
+    list: "installed sudo"
+  register: sudo_exist
+
+- name: Ugrate Sudo tool to specific version
+  yum:
+    name: {{sudo_version}}
+    state: present
+  when: sudo_exist.rc == 0

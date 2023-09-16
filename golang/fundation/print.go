@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// [Pattern]: [Carrige Return] Mac/Unix: \r
+// [Pattern]: [Carrige Return] back to begining of the line. ^M(ctrl+M), Mac/Unix: \r
 // [Pattern]: [Go Print fotmat] cheatsheet
 // https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
 func PrintProgressBar() {

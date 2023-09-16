@@ -9,7 +9,7 @@ type LockStruct struct {
 	lock sync.Mutex
 }
 
-// [Pattern]: [Go] Mutex
+// [Pattern]: [Go] Mutex Sample
 func UseMutex() {
 	var t LockStruct // declaration has created a new instance
 	t.lock.Lock()

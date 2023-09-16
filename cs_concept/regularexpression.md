@@ -1,5 +1,19 @@
 # Regular Expression
 
+### Common Used
+
+##### find same list number and put it in next line
+
+find: ^(\d)(.*)\n([.\n\w\W]*)(\1.*)
+replace: $1$2\n> $4\n$3
+
+##### unique with sorted list
+
+find: ^(.*)(\n\1)+
+replace: $1
+
+### complex regex
+
 `[^/]`, anything not `/`
 `.*?` or `.+?`, shortest match
 `(?:abc)`, abc is optional

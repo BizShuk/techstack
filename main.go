@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/bizshuk/techstack/golang/sync"
-)
+import "fmt"
 
 // This example inserts several ints into an IntHeap, checks the minimum,
 // and removes them in order of priority.
@@ -22,5 +20,14 @@ func main() {
 	// fmt.Printf("%064b", x)
 
 	// fundation.CharSlice()
-	sync.SyncCond()
+	// sync.SyncCond()
+
+	m := map[int]bool{-1: true}
+	fmt.Println(len(m))
+	for k, v := range m {
+
+		m[k+1] = true
+		fmt.Println(k, v)
+	}
+
 }

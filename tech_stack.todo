@@ -22,7 +22,8 @@ Network:
     UDP:
         ☐ unordered
         Use case:
-            ☐ Video
+            ☐ Streaming (Video, Gaming, Music, Live)
+
 
 
 HTTP:

@@ -2,7 +2,7 @@ package fundation
 
 import "fmt"
 
-// [Pattern]: [Go] Integer/Floating-point/Imagenary literals, https://go.dev/ref/spec#Integer_literals
+// [Pattern]: [Go Primitive] Integer/Floating-point/Imagenary literals, https://go.dev/ref/spec#Integer_literals
 func NumberPresent() {
 	// decimal := 42
 	// million := 1_000_000

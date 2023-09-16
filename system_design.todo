@@ -14,11 +14,11 @@ Overview:
 
 
 System:
-☐ 畫架構圖說明一個你之前做過的專案
-☐ 高併發大流量經驗
-☐ kafka/redis/microservice經驗
-☐ Rpc 關於框架細節
-☐ 分布式架構
+    ☐ 畫架構圖說明一個你之前做過的專案
+    ☐ 高併發大流量經驗
+    ☐ kafka/redis/microservice經驗
+    ☐ Rpc 關於框架細節
+    ☐ 分布式架構
 
 System Design:
     ☐ 購買商品限量問題
